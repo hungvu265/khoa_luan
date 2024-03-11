@@ -41,18 +41,21 @@
 </head>
 <body>
 <!-- Navbar -->
-<nav class="navbar navbar-expand-md navbar-dark bg-pink">
-    <a href="{{ route(STORE) }}" class="navbar-brand">Store</a>
+<div  style="background-color: black; width: 100%">
+    <img style="width: 100%" src="{{ asset('images/logo_banner_image.jpg') }}">
+</div>
+<nav class="navbar navbar-expand-md navbar-dark bg-pink" style="background-color: black;">
+{{--    <a href="{{ route(STORE) }}" class="navbar-brand">GOLDEN STORE</a>--}}
     <button class="navbar-toggler mr-5" data-toggle="collapse" data-target="#ResponsiveNavbar">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="ResponsiveNavbar">
-        <ul class="navbar-nav ml-auto mr-5">
+        <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-                <a href="{{ route(STORE) }}" class="nav-link active">Trang chủ</a>
+                <a href="{{ route(STORE) }}" class="nav-link active">TRANG CHỦ</a>
             </li>
             <li class="nav-item dropdown">
-                <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Sản phẩm</a>
+                <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">SẢN PHẨM</a>
                 <div class="dropdown-menu mt-2 bg-pink dropdown-nav" style="width: 200px !important;
     					height: auto !important;">
                     <div class="row">
@@ -65,13 +68,13 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a href="{{ route(STORE_CART) }}" class="nav-link">Giỏ hàng</a>
+                <a href="{{ route(STORE_CART) }}" class="nav-link">GIỎ HÀNG</a>
             </li>
             <li class="nav-item">
-                <a href="" class="nav-link">Thông tin</a>
+                <a href="" class="nav-link">THÔNG TIN</a>
             </li>
             <li class="nav-item">
-                <a href="" class="nav-link">Liên hệ</a>
+                <a href="" class="nav-link">LIÊN HỆ</a>
             </li>
             @if(Auth::guard('web')->check())
             <li class="nav-item" style="position: relative">
@@ -84,7 +87,7 @@
             </li>
             @else
                 <li class="nav-item">
-                    <a href="{{ route(STORE_LOGIN) }}" class="nav-link">Đăng nhập</a>
+                    <a href="{{ route(STORE_LOGIN) }}" class="nav-link">ĐĂNG NHẬP</a>
                 </li>
             @endif
         </ul>

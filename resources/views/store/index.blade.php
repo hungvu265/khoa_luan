@@ -1,17 +1,17 @@
 @extends('index')
 @section('content')
 <!-- Carousel -->
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"  style="background-color: #E3E1D9;">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="https://theme.hstatic.net/200000191303/1000790874/14/ms_banner_img2.jpg?v=22" class="d-block w-100" alt="anh">
+            <img style="width: 70%; display: block; margin-left: auto; margin-right: auto;" src="{{ asset('images/logo_banner_1.jpg') }}" class="d-block " alt="anh">
         </div>
         <div class="carousel-item">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRDPtZfRGWfj9LUxZwuidKnrbQM3K-uE4FSz_aFgbMK1mkEbNGRF0vg4DVc0OfJkRcKvU&usqp=CAU" class="d-block w-100" alt="anh">
+            <img  style="width: 70%; display: block; margin-left: auto; margin-right: auto;" src="{{ asset('images/logo_banner_2.jpg') }}" class="d-block" alt="anh">
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -62,10 +62,14 @@
 
 <!-- Sản phẩm mới -->
 <div class="new-product mt-5">
-    <img src="https://images.macrumors.com/t/zJxyEXeL_489TZP8hMRA9JA3v1Q=/1600x900/smart/article-new/2022/09/iOS-16-Wallpaper-Spectrum-Feature.jpg" class="img-fluid">
+    <img style="width: 50%" src="{{ asset('images/image_footer.jpg') }}" class="img-fluid">
     <div>
-        <h3>Nike Hypervemon</h3>
-        <p>Up to sale 70%</p>
+        <h3 style="font-family: Oswald, Oswald, sans-serif;">ĐĂNG KÝ NHẬN SÁCH </h3>
+        <form action="">
+            <label for="email"></label>
+            <input type="email" id="email" name="email"  placeholder="Email của bạn">
+            <input type="submit">
+        </form>
     </div>
 </div>
 @endsection

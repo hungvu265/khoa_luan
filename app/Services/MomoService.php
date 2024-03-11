@@ -63,7 +63,7 @@ class MomoService extends BaseService
             $result = $this->execPostRequest($endpoint, json_encode($data));
 
             $jsonResult = json_decode($result, true);
-            dd($jsonResult);
+//            dd($jsonResult);
             return $jsonResult['payUrl'];
         } catch (\Exception $e) {
             return route(STORE_CART);
