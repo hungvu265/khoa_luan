@@ -9,16 +9,16 @@ $(document).ready(function () {
         $('#helper').hide();
     }
 
-    window.oncontextmenu = function (e) {
-        e.preventDefault()
-
-        var box = $('#helper');
-        box.show()
-        box.css('left', e.pageX + 'px')
-        box.css('top', e.pageY + 'px')
-    };
-
-    window.onclick = function () {
-        hiddenBox();
-    }
+    // window.oncontextmenu = function (e) {
+    //     e.preventDefault()
+    //
+    //     var box = $('#helper');
+    //     box.show()
+    //     box.css('left', e.pageX + 'px')
+    //     box.css('top', e.pageY + 'px')
+    // };
+    //
+    // window.onclick = function () {
+    //     hiddenBox();
+    // }
 });

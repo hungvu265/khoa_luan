@@ -4,6 +4,7 @@
     <title>Trang chủ</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -36,6 +37,10 @@
 
         #helper a:hover {
             background-color: firebrick;
+        }
+
+        *:focus {
+            outline: none;
         }
     </style>
 </head>
@@ -177,11 +182,11 @@
 </div>
 
 {{-- Thanh công cụ trợ giúp --}}
-<div style="position: absolute;display: none" id="helper">
-    <div><a href="{{ route(STORE) }}">Trang chủ</a></div>
-    <div><a href="{{ route(STORE_CART) }}">Giỏ hàng</a></div>
-    <div><a href="{{ route(STORE_CUSTOMER_INFO) }}">Thông tin cá nhân</a></div>
-</div>
+{{--<div style="position: absolute;display: none" id="helper">--}}
+{{--    <div><a href="{{ route(STORE) }}">Trang chủ</a></div>--}}
+{{--    <div><a href="{{ route(STORE_CART) }}">Giỏ hàng</a></div>--}}
+{{--    <div><a href="{{ route(STORE_CUSTOMER_INFO) }}">Thông tin cá nhân</a></div>--}}
+{{--</div>--}}
 
 <script src="{{ mix('/js/store.js') }}"></script>
 <script type="text/javascript">

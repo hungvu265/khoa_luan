@@ -37,19 +37,23 @@
             @foreach($special->product as $key => $row)
                 @if($key <= 3)
                     <div class="col-md-3">
-                        <div class="border-product">
-                            <input type="hidden" name="product_id" value="{{ $row->id }}">
-                            <img src="{{ asset('images/' . $row->component->first()->image) }}"
-                                class="img-thumbnail">
-                            <div class="pt-3 name"><strong>{{ $row->name }}</strong></div>
-                            <p>While/Black</p>
-                            <div>
-                                <strong class="price">
-                                    {{ number_format($row->component->first()->price) }} VNĐ
-                                </strong>
-                            </div>
-                            <a href="{{ route(STORE_CART_DETAIL, $row->id) }}" class="btn btn-danger">Mua ngay</a>
+                        <div style="width: 200px">
+                            <div style="width: 200px; height: 200px; border-radius: 50%; border: 2px solid; background-image: url('{{asset('images/' . $row->component->first()->image)}}'); background-position: center; background-size: cover;background-repeat: no-repeat;" onclick="redirectLink('http://127.0.0.1:8000/store/cart/list-category?product-type=1')"></div>
+                            <h3 class="text-center mt-3" style="font-family: Oswald, Oswald, sans-serif;color: #63584c">Adobe</h3>
                         </div>
+{{--                        <div class="border-product">--}}
+{{--                            <input type="hidden" name="product_id" value="{{ $row->id }}">--}}
+{{--                            <img src="{{ asset('images/' . $row->component->first()->image) }}"--}}
+{{--                                class="img-thumbnail">--}}
+{{--                            <div class="pt-3 name"><strong>{{ $row->name }}</strong></div>--}}
+{{--                            <p>While/Black</p>--}}
+{{--                            <div>--}}
+{{--                                <strong class="price">--}}
+{{--                                    {{ number_format($row->component->first()->price) }} VNĐ--}}
+{{--                                </strong>--}}
+{{--                            </div>--}}
+{{--                            <a href="{{ route(STORE_CART_DETAIL, $row->id) }}" class="btn btn-danger">Mua ngay</a>--}}
+{{--                        </div>--}}
                     </div>
                 @endif
             @endforeach
@@ -61,15 +65,22 @@
 <hr>
 
 <!-- Sản phẩm mới -->
-<div class="new-product mt-5">
-    <img style="width: 50%" src="{{ asset('images/image_footer.jpg') }}" class="img-fluid">
-    <div>
-        <h3 style="font-family: Oswald, Oswald, sans-serif;">ĐĂNG KÝ NHẬN SÁCH </h3>
-        <form action="">
-            <label for="email"></label>
-            <input type="email" id="email" name="email"  placeholder="Email của bạn">
-            <input type="submit">
-        </form>
+<div class="mt-5">
+    <div class="row">
+        <div class="col-6" style="padding-left: 50px">
+            <img style="width: 100%" src="{{ asset('images/image_footer.jpg') }}" class="img-fluid">
+        </div>
+        <div class="col-6" style="display: flex;align-items: center;justify-content: center;">
+            <div>
+                <h3 style="font-family: Oswald, Oswald, sans-serif;color: #63584c;font-size: 38px;font-weight: 400">ĐĂNG KÝ NHẬN SÁCH </h3>
+                <form action="" method="post" style="display: flex;box-shadow: 0 10px 15px #cdcdcd;position: relative;border-radius: 30px;overflow: hidden;margin: 0">
+                    <input style="margin: 0; border: none; width: 100%; font-weight: 300; height: 50px; font-size: 16px; padding-left: 30px"
+                        type="email" value="" placeholder="Email của bạn" name="EMAIL" id="mail" aria-label="general.newsletter_form.newsletter_email">
+                    <button style="position: absolute; right: 0; top: 0; height: 50px; background-color: #d4651f; color: #FFFFFF; font-size: 16px; text-transform: uppercase"
+                        class="btn subscribe" name="subscribe" id="subscribe">Đăng ký</button>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 @endsection
@@ -88,6 +99,10 @@
                 row += '<div class="row">' + '<input type="hidden" name="product_id" value="' + val.id + '">' + '<div class="col-md-5">' + '<img src="' + 'http://127.0.0.1:8000/images/' + val.img + '">' + '</div>' + '<div class="col-md-7">' + '<strong>' + val.name + '</strong>' + '<div class="product-giohang">' + '<div>' + '<p>Giá: </p>' + '<p>' + val.price + '</p>' + '</div>' + '<div>' + '<p>Số lượng: </p>' + '<p>' + val.amount + '</p>' + '</div>' + '</div>' + '</div>' + '<hr>' + '</div>';
             });
             return row;
+        }
+
+        function redirectLink(url) {
+            window.location.href = url
         }
 
         $(document).ready(function () {
