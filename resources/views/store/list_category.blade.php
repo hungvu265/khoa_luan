@@ -31,7 +31,7 @@
             <div class="col-md-9">
                 <div class="row">
                     <div class="col-md-12">
-                        <img src="https://rsggroup.com/wp-content/uploads/2020/03/bg-3-980x325.jpg" class="img-thumbnail">
+{{--                        <img src="" class="img-thumbnail">--}}
                     </div>
                 </div>
                 <div class="row">

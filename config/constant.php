@@ -17,6 +17,7 @@ define('STORE_GET_MEMORY', 'store.get.memory');
 define('STORE_CREATE_PAYMENT', 'store.create.payment');
 define('STORE_CART_DETAIL', 'store.cart.detail');
 define('STORE_LIST_CATEGORY', 'store.list.category');
+define('SEND_MAIL', 'send.mail');
 
 //Auth
 define('ADMIN_LOGIN', 'admin.login');

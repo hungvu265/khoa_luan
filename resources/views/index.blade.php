@@ -4,7 +4,7 @@
     <title>Trang chủ</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+{{--    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">--}}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -135,36 +135,37 @@
             <div class="col-md-3 col-sm-6">
                 <div>
                     <h6 class="mb-4">HỆ THỐNG CỬA HÀNG</h6>
-                    <div><a href="">Địa chỉ: Số 16 Ngõ 58 Trần Bình, Mai Dịch, Cầu Giấy, Hà Nội</a></div>
-                    <div><a href="">Số điện thoại: 0969705425</a></div>
-                    <div><a href="">Email: hungvumanh11o23@gmail.com</a></div>
-
+                    <div>Địa chỉ: 78/1 Nguyễn Thiện Kế, Sơn Trà, Đà Nẵng , Việt Nam</div>
+                    <div>Số điện thoại: 0876722439</div>
+                    <div>Website:<a href=""> goldensoftware.vn</a></div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6">
-                <div>
-                    <h6 class="mb-4">HỖ TRỢ</h6>
-                    <div><a href="">Hướng dẫn chọn cỡ giày</a></div>
-                    <div><a href="">Chính sách đổi trả/ hoàn tiền</a></div>
-                    <div><a href="">Chính sách bảo mật thông tin</a></div>
-                    <div><a href="">Chính sách bảo hành</a></div>
-                    <div><a href="">Hường dẫn mua hàng</a></div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div>
-                    <h6 class="mb-4">LIÊN HỆ VỚI SHOP</h6>
-                    <div><a href="">Hướng dẫn đặt hàng</a></div>
-                    <div><a href="">Thông tin thanh toán</a></div>
-                    <div><a href="">Chính sách giao hàng và nhận hàng</a></div>
-                    <div><a href="">Liên hệ</a></div>
-                    <div><a href="">Sơ đồ website</a></div>
-                </div>
-            </div>
+{{--            <div class="col-md-3 col-sm-6">--}}
+{{--                <div>--}}
+{{--                    <h6 class="mb-4">HỖ TRỢ</h6>--}}
+{{--                    <div><a href="">Hướng dẫn chọn cỡ giày</a></div>--}}
+{{--                    <div><a href="">Chính sách đổi trả/ hoàn tiền</a></div>--}}
+{{--                    <div><a href="">Chính sách bảo mật thông tin</a></div>--}}
+{{--                    <div><a href="">Chính sách bảo hành</a></div>--}}
+{{--                    <div><a href="">Hường dẫn mua hàng</a></div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="col-md-3 col-sm-6">--}}
+{{--                <div>--}}
+{{--                    <h6 class="mb-4">LIÊN HỆ VỚI SHOP</h6>--}}
+{{--                    <div><a href="">Hướng dẫn đặt hàng</a></div>--}}
+{{--                    <div><a href="">Thông tin thanh toán</a></div>--}}
+{{--                    <div><a href="">Chính sách giao hàng và nhận hàng</a></div>--}}
+{{--                    <div><a href="">Liên hệ</a></div>--}}
+{{--                    <div><a href="">Sơ đồ website</a></div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
             <div class="col-md-3 col-sm-6">
                 <div>
                     <h6 class="mb-4">CONTACT US</h6>
-                    <div><a href="">content</a></div>
+                    <div>Zalo:<a href=""> 0876722439</a></div>
+                    <div>Email:<a href=""> goldenstoresoftware@gmail.com</a></div>
+                    <div>Fanpage:<a href=""> https://www.facebook.com/Goldensoftwarevn/</a></div>
                 </div>
             </div>
         </div>

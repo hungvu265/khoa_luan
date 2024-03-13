@@ -110,7 +110,7 @@ Route::prefix('store')->group(function () {
        Route::get('success', [StripeController::class, 'success']);
     });
 
-    Route::get('send', [StoreController::class, 'sendMail']);
+    Route::post('send', [StoreController::class, 'sendMail'])->name(SEND_MAIL);
 });
 
 //Admin Management

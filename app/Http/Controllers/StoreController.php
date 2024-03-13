@@ -253,4 +253,28 @@ class StoreController extends Controller
 
         return redirect()->back()->with(['status' => 'success', 'message' => 'Bình luận thành công']);
     }
+
+    public function sendMail(Request $request){
+        $dataRequest = $request->all();
+        // configure the Google Client
+        $client = new \Google_Client();
+        $client->setApplicationName('Google Sheets API');
+        $client->setScopes([\Google_Service_Sheets::SPREADSHEETS]);
+        $client->setAccessType('offline');
+        // credentials.json is the key file we downloaded while setting up our Google Sheets API
+        $path = public_path('data_store.json');
+        $client->setAuthConfig($path);
+        // configure the Sheets Service
+        $service = new \Google_Service_Sheets($client);
+        $newRow = [
+            $dataRequest['EMAIL']
+        ];
+        $rows = [$newRow]; // you can append several rows at once
+        $valueRange = new \Google_Service_Sheets_ValueRange();
+        $valueRange->setValues($rows);
+        $range = 'Trang tính1'; // the service will detect the last row of this sheet
+        $options = ['valueInputOption' => 'USER_ENTERED'];
+        $service->spreadsheets_values->append('12COIm_C9l75VKXvo2Zj3-KxVDWymvwGmiVdTh39q4Ro', $range, $valueRange, $options);
+        return redirect()->back()->with(['status' => 'success', 'message' => 'Gửi email đăng kí nhận sách thành công']);
+    }
 }

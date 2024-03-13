@@ -1,6 +1,7 @@
 @extends('index')
 @section('content')
-<!-- Carousel -->
+    @include('common.noti_message')
+    <!-- Carousel -->
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"  style="background-color: #E3E1D9;">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -38,8 +39,9 @@
                 @if($key <= 3)
                     <div class="col-md-3">
                         <div style="width: 200px">
-                            <div style="width: 200px; height: 200px; border-radius: 50%; border: 2px solid; background-image: url('{{asset('images/' . $row->component->first()->image)}}'); background-position: center; background-size: cover;background-repeat: no-repeat;" onclick="redirectLink('http://127.0.0.1:8000/store/cart/list-category?product-type=1')"></div>
-                            <h3 class="text-center mt-3" style="font-family: Oswald, Oswald, sans-serif;color: #63584c">Adobe</h3>
+
+                            <div style="width: 200px; cursor: pointer; height: 200px; border-radius: 50%; border: 2px solid; background-image: url('{{asset('images/' . $row->component->first()->image)}}'); background-position: center; background-size: 60%;background-repeat: no-repeat;" onclick="redirectLink('http://127.0.0.1:8000/store/cart/list-category?product-type={{$row->id}}')"></div>
+                            <h3 class="text-center mt-3" style="font-family: Oswald, Oswald, sans-serif;color: #63584c">{{$row->name}}</h3>
                         </div>
 {{--                        <div class="border-product">--}}
 {{--                            <input type="hidden" name="product_id" value="{{ $row->id }}">--}}
@@ -73,7 +75,8 @@
         <div class="col-6" style="display: flex;align-items: center;justify-content: center;">
             <div>
                 <h3 style="font-family: Oswald, Oswald, sans-serif;color: #63584c;font-size: 38px;font-weight: 400">ĐĂNG KÝ NHẬN SÁCH </h3>
-                <form action="" method="post" style="display: flex;box-shadow: 0 10px 15px #cdcdcd;position: relative;border-radius: 30px;overflow: hidden;margin: 0">
+                <form action="{{route(SEND_MAIL)}}" method="post" style="display: flex;box-shadow: 0 10px 15px #cdcdcd;position: relative;border-radius: 30px;overflow: hidden;margin: 0">
+                    @csrf
                     <input style="margin: 0; border: none; width: 100%; font-weight: 300; height: 50px; font-size: 16px; padding-left: 30px"
                         type="email" value="" placeholder="Email của bạn" name="EMAIL" id="mail" aria-label="general.newsletter_form.newsletter_email">
                     <button style="position: absolute; right: 0; top: 0; height: 50px; background-color: #d4651f; color: #FFFFFF; font-size: 16px; text-transform: uppercase"
